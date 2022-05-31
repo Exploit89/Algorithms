@@ -5,6 +5,8 @@ namespace BinarySearch
 {
     internal class Program
     {
+
+
         static void Main(string[] args)
         {
             List<int> list = new List<int> { 1, 3, 5, 7, 9 };
@@ -12,9 +14,8 @@ namespace BinarySearch
             Console.WriteLine(result);
             result = BinarySearch(list, -1);
             Console.WriteLine(result);
-            //int result2 = list.BinarySearch(-1);
-            //Console.WriteLine(result2);
         }
+
         static int BinarySearch(List<int> somelist, int number)
         {
             int lowNumber = 0;
@@ -28,15 +29,12 @@ namespace BinarySearch
                 if (guess == number)
                     return middleNumber;
 
-                // вариант тернарной операции выражения ниже. Говно в том, что результат нужно присвоить переменной.
-                //int number2 = guess > number ? highNumber = (middleNumber - 1) : lowNumber = (middleNumber + 1);
-
                 if (guess > number)
                     highNumber = middleNumber - 1;
                 else
                     lowNumber = middleNumber + 1;
             }
-            return 0;
+            return -1;
         }
     }
 }
